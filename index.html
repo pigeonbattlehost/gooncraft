@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download GoonCraft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    h1 {
+      color: #bb86fc;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    .download-btn {
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(98,0,234,0.5);
+      font-family: 'Poppins', sans-serif;
+    }
+    .download-btn:hover {
+      background-color: #7c4dff;
+      box-shadow: 0 6px 16px rgba(124,77,255,0.7);
+    }
+    .version {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #aaa;
+    }
+    .faq {
+      margin-top: 3rem;
+      max-width: 600px;
+      text-align: left;
+    }
+    .faq h2 {
+      color: #bb86fc;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .faq p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .footer-note {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Download GoonCraft</h1>
+  <button class="download-btn" onclick="downloadFile()">Download</button>
+  <div class="version">GoonCraft 1.0</div>
+  <div class="footer-note">For Minecraft JE Forge 1.12.2</div>
+
+  <div class="faq">
+    <h2>FAQ</h2>
+    <p><strong>Will there be a port on mobile (Bedrock Edition)?</strong></p>
+    <p>No, sadly.. Modding on bedrock edition is very limited so i can only add some blocks, and that's all.</p>
+  </div>
+
+  <script>
+    function downloadFile() {
+      const link = document.createElement('a');
+      link.href = 'gooncraft112.jar';
+      link.download = 'gooncraft112.jar';
+      link.click();
+    }
+  </script>
+</body>
+</html>
